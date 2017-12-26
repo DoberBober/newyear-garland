@@ -163,18 +163,17 @@
 		})
 	}
 
-	// var l = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'", "\\"];
-	var l = ["1", "q", "w"]
-	// var k = ["z", "x", "c", "v", "b", "n", "m", ",", ".", "/"];
+	var l = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'", "\\"];
+	var k = ["z", "x", "c", "v", "b", "n", "m", ",", ".", "/"];
 	var a = {};
 	for (var e = 0, c = l.length; e < c; e++) {
 		a[l[e].charCodeAt(0)] = e;
 	}
-	// for (var _e = 0, _c = k.length; _e < _c; _e++) {
-	// 	a[k[_e].charCodeAt(0)] = _e;
-	// }
+	for (var _e = 0, _c = k.length; _e < _c; _e++) {
+		a[k[_e].charCodeAt(0)] = _e;
+	}
 
-	document.addEventListener('keydown', function(j){
+	document.addEventListener('keypress', function(j){
 		var i = j.target;
 		if (j.which in a) {
 			var index = parseInt(a[j.which]);

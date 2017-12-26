@@ -3,11 +3,6 @@ body{
 	z-index:0;
 	margin:0;
 	padding:0 0 1em 0;
-	background-image: url('bg.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center top;
 }
 
 .b-page__content{min-height:200px}
