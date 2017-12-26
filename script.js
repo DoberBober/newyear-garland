@@ -163,18 +163,19 @@
 		})
 	}
 
-	var l = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'", "\\"];
-	var k = ["z", "x", "c", "v", "b", "n", "m", ",", ".", "/"];
+	var l = ["49", "50", "51", "52", "53", "54", "55", "56", "57", "48", "189", "187", "81", "87", "69", "82", "84", "89", "85", "73", "79", "80", "219", "221", "65", "83", "68", "70", "71", "72", "74", "75", "76", "186", "222", "220"];
+	var k = ["90", "88", "67", "86", "66", "78", "77", "188", "190", "191"];
 	var a = {};
 	for (var e = 0, c = l.length; e < c; e++) {
-		a[l[e].charCodeAt(0)] = e;
+		a[l[e]] = e;
 	}
 	for (var _e = 0, _c = k.length; _e < _c; _e++) {
-		a[k[_e].charCodeAt(0)] = _e;
+		a[k[_e]] = _e;
 	}
 
-	document.addEventListener('keypress', function(j){
+	document.addEventListener('keydown', function(j){
 		var i = j.target;
+		console.log(j.keyCode)
 		if (j.which in a) {
 			var index = parseInt(a[j.which]);
 			balls = new Balls(context, buffer.getSound(index));
